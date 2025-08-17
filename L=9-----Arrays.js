@@ -11,8 +11,14 @@
 // Creating Arrays 🏗️
 let arr1 = [1, 2, 3, 4]; // Literal
 let arr2 = new Array(5); // Array with length 5 (empty slots)
+
+// Array.of(...items) → Array
 let arr3 = Array.of(1, 2, 3); // [1, 2, 3]
+// Use: Creates a new Array from arguments, regardless of number/type
+
+// Array.from(arrayLike, [mapFn]) → Array
 let arr4 = Array.from('hello'); // ['h', 'e', 'l', 'l', 'o']
+// Use: Converts array-like or iterable objects to real arrays
 
 // Accessing & Modifying Elements 🔢
 console.log(arr1[0]); // 1
@@ -64,17 +70,46 @@ let nested = [1, [2, [3]]];
 console.log(nested.flat(2)); // [1,2,3]
 let filled = new Array(3).fill(7); // [7,7,7]
 
+// =============================
+// 🌀 Spread Operator with Arrays (...)
+// =============================
+// 1. Copying arrays (shallow copy) → Array
+let arrCopy = [...arr1]; // [1, 20, 3, 4]
+
+// 2. Merging arrays → Array
+let mergedSpread = [...arrA, ...arrB]; // [1,2,3,4]
+
+// 3. Converting array-like/iterable to array → Array
+let strToArr = [...'hello']; // ['h','e','l','l','o']
+
+// 4. Using with Math functions (spread as arguments)
+let maxVal = Math.max(...nums); // Number
+
+// 5. Adding elements at any position
+let arrInsert = [0, ...arrA, 5]; // [0,1,2,5]
+
+// Interview Tip: Spread is shallow (nested objects/arrays are still references)
+
 // Concat & Join
 let arrA = [1,2], arrB = [3,4];
 let merged = arrA.concat(arrB); // [1,2,3,4]
 console.log([1,2,3].join('-')); // '1-2-3'
+
+// Spread vs concat:
+// - concat() returns a new array (Array)
+// - spread returns a new array (Array)
+// - Both are shallow copies
 
 // =============================
 // 🧠 Popular Interview Questions & Edge Cases
 // =============================
 //
 // 1. How to check if a variable is an array?
+// Array.isArray(value) → Boolean
 console.log(Array.isArray(arr1)); // true
+console.log(Array.isArray('hello')); // false
+
+// Interview Tip: Use isArray to distinguish arrays from objects or array-like values.
 
 // 2. What happens if you access out-of-bounds?
 console.log(arr1[100]); // undefined
@@ -138,13 +173,18 @@ console.log(sparse); // [ <5 empty items>, 10 ]
 // 9b. What are array-like objects? How to convert?
 //    - Array-like: Has length and indexed elements, but not full array methods (e.g., arguments, NodeList)
 //    - Convert with Array.from() or spread [...obj]
+// Array.from(arrayLike, [mapFn]) → Array
 function arrayLikeExample() {
 	console.log(arguments); // array-like
-	let arr = Array.from(arguments);
-	let arr2 = [...arguments];
+	let arr = Array.from(arguments); // converts to real array
+	let arr2 = [...arguments]; // also converts
 	return arr;
 }
-arrayLikeExample(1,2,3);
+console.log(arrayLikeExample(1,2,3)); // [1,2,3]
+
+// Example: Convert NodeList to Array (browser only)
+// let divs = document.querySelectorAll('div');
+// let divArr = Array.from(divs);
 
 // 9c. How to create a multidimensional array?
 let matrix = [

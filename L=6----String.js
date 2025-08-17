@@ -46,64 +46,65 @@ let path = "C:\\Users\\Nishant";
 // 🔥 Most Used String Methods & Properties
 // =============================
 
-// 1. length
+
+// 1. length (property) → Number
 console.log("hello".length); // 5
 
-// 2. toUpperCase() / toLowerCase()
+// 2. toUpperCase() / toLowerCase() → String
 console.log("hello".toUpperCase()); // 'HELLO'
 console.log("HELLO".toLowerCase()); // 'hello'
 
-// 3. trim(), trimStart(), trimEnd()
+// 3. trim(), trimStart(), trimEnd() → String
 console.log("  hi  ".trim()); // 'hi'
 console.log("  hi  ".trimStart()); // 'hi  '
 console.log("  hi  ".trimEnd()); // '  hi'
 
-// 4. slice(start, end)
+// 4. slice(start, end) → String
 console.log("abcdef".slice(1, 4)); // 'bcd'
 
-// 5. substring(start, end)
+// 5. substring(start, end) → String
 console.log("abcdef".substring(1, 4)); // 'bcd'
 
-// 6. substr(start, length) (deprecated)
+// 6. substr(start, length) (deprecated) → String
 console.log("abcdef".substr(1, 3)); // 'bcd'
 
-// 7. indexOf(), lastIndexOf()
+// 7. indexOf(), lastIndexOf() → Number
 console.log("banana".indexOf("a")); // 1
 console.log("banana".lastIndexOf("a")); // 5
 
-// 8. includes(), startsWith(), endsWith()
+// 8. includes(), startsWith(), endsWith() → Boolean
 console.log("hello world".includes("world")); // true
 console.log("hello world".startsWith("hello")); // true
 console.log("hello world".endsWith("world")); // true
 
-// 9. replace(), replaceAll()
+// 9. replace(), replaceAll() → String
 console.log("a-b-c".replace("-", ":")); // 'a:b-c'
 console.log("a-b-c".replaceAll("-", ":")); // 'a:b:c'
 
-// 10. split(separator)
+// 10. split(separator) → Array
 console.log("a,b,c".split(",")); // ['a', 'b', 'c']
 
-// 11. concat()
+// 11. concat() → String
 console.log("Hello ".concat("World!")); // 'Hello World!'
 
-// 12. repeat()
+// 12. repeat() → String
 console.log("ha".repeat(3)); // 'hahaha'
 
-// 13. padStart(), padEnd()
+// 13. padStart(), padEnd() → String
 console.log("5".padStart(3, "0")); // '005'
 console.log("5".padEnd(3, "0")); // '500'
 
-// 14. charAt(), charCodeAt()
+// 14. charAt() → String, charCodeAt() → Number
 console.log("abc".charAt(1)); // 'b'
 console.log("abc".charCodeAt(1)); // 98
 
-// 15. match(), matchAll(), search(), test()
+// 15. match() → Array|null, matchAll() → Iterator, search() → Number, test() (on RegExp) → Boolean
 console.log("abc123".match(/\d+/)); // ['123']
 console.log([..."abc123abc".matchAll(/abc/g)]); // [Array]
 console.log("abc123".search(/\d/)); // 3
 console.log(/\d+/.test("abc123")); // true
 
-// 16. localeCompare()
+// 16. localeCompare() → Number
 console.log("a".localeCompare("b")); // -1
 
 // =============================
