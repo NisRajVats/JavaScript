@@ -65,6 +65,10 @@ const double = n => n * 2;
 (function() {
     // console.log('IIFE runs immediately!');
 })();
+// 🔹 Why use IIFE?
+// ✅ To avoid polluting global scope (variables stay inside function).
+// ✅ To execute code immediately.
+// ✅ Useful in modules, initialization code, event handlers.
 
 const obj = {
     name: "nishant",

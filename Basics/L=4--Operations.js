@@ -149,7 +149,7 @@ console.log(~5);     // -6 (inverts all bits)
 console.log(5 << 1); // 10 (shift left)
 console.log(5 >> 1); // 2 (shift right)
 
-// 11. Nullish Coalescing Operator (Section: Advanced)
+// 11. Nullish Coalescing Operator (Section: Advanced) The nullish coalescing operator ?? returns the right-hand value if the left-hand value is null or undefined, otherwise it returns the left-hand value.
 // ?? returns the right value if the left is null or undefined
 
 let userInput = null;

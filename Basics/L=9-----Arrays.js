@@ -37,63 +37,63 @@ console.log(arr1.length); // 4
 let nums = [1, 2, 3, 4, 5];
 
 // Adding/Removing Elements
-nums.push(6); // Add to end
-nums.pop(); // Remove from end
-nums.unshift(0); // Add to start
-nums.shift(); // Remove from start
+nums.push(6); // Add to end | returns new length (Number)
+nums.pop(); // Remove from end | returns removed element
+nums.unshift(0); // Add to start | returns new length (Number)
+nums.shift(); // Remove from start | returns removed element
 
 // Searching & Testing
-console.log(nums.indexOf(3)); // 2
-console.log(nums.includes(4)); // true
+console.log(nums.indexOf(3)); // 2 | returns index (Number), -1 if not found
+console.log(nums.includes(4)); // true | returns Boolean
 
 // Slicing & Splicing
-console.log(nums.slice(1, 3)); // [2,3]
-nums.splice(2, 1, 99); // Remove 1 at index 2, insert 99
+console.log(nums.slice(1, 3)); // [2,3] | returns new array (shallow copy)
+nums.splice(2, 1, 99); // Remove 1 at index 2, insert 99 | returns array of removed elements
 console.log(nums);
 
 // Iteration
-nums.forEach((n) => console.log(n));
-let doubled = nums.map((n) => n * 2);
-let even = nums.filter((n) => n % 2 === 0);
-let sum = nums.reduce((acc, n) => acc + n, 0);
+nums.forEach((n) => console.log(n)); // returns undefined
+let doubled = nums.map((n) => n * 2); // returns new array
+let even = nums.filter((n) => n % 2 === 0); // returns new array
+let sum = nums.reduce((acc, n) => acc + n, 0); // returns accumulated value
 
 // Find & FindIndex
-let found = nums.find((n) => n > 3);
-let foundIdx = nums.findIndex((n) => n > 3);
+let found = nums.find((n) => n > 3); // returns first matching element or undefined
+let foundIdx = nums.findIndex((n) => n > 3); // returns index or -1
 
 // Sorting & Reversing
-let sorted = [3, 1, 2].sort(); // [1,2,3] (lexical for strings!)
-let reversed = nums.slice().reverse();
+let sorted = [3, 1, 2].sort(); // [1,2,3] (lexical for strings!) | returns sorted array (mutates original)
+let reversed = nums.slice().reverse(); // returns reversed array (mutates original)
 
 // Flattening & Filling
 let nested = [1, [2, [3]]];
-console.log(nested.flat(2)); // [1,2,3]
-let filled = new Array(3).fill(7); // [7,7,7]
+console.log(nested.flat(2)); // [1,2,3] | returns new flattened array
+let filled = new Array(3).fill(7); // [7,7,7] | returns modified array (mutates original)
 
 // =============================
 // 🌀 Spread Operator with Arrays (...)
 // =============================
 // 1. Copying arrays (shallow copy) → Array
-let arrCopy = [...arr1]; // [1, 20, 3, 4]
+let arrCopy = [...arr1]; // [1, 20, 3, 4] | returns new array
 
 // 2. Merging arrays → Array
-let mergedSpread = [...arrA, ...arrB]; // [1,2,3,4]
+let mergedSpread = [...arrA, ...arrB]; // [1,2,3,4] | returns new array
 
 // 3. Converting array-like/iterable to array → Array
-let strToArr = [...'hello']; // ['h','e','l','l','o']
+let strToArr = [...'hello']; // ['h','e','l','l','o'] | returns new array
 
 // 4. Using with Math functions (spread as arguments)
-let maxVal = Math.max(...nums); // Number
+let maxVal = Math.max(...nums); // Number | returns max value (Number)
 
 // 5. Adding elements at any position
-let arrInsert = [0, ...arrA, 5]; // [0,1,2,5]
+let arrInsert = [0, ...arrA, 5]; // [0,1,2,5] | returns new array
 
 // Interview Tip: Spread is shallow (nested objects/arrays are still references)
 
 // Concat & Join
 let arrA = [1,2], arrB = [3,4];
-let merged = arrA.concat(arrB); // [1,2,3,4]
-console.log([1,2,3].join('-')); // '1-2-3'
+let merged = arrA.concat(arrB); // [1,2,3,4] | returns new array
+console.log([1,2,3].join('-')); // '1-2-3' | returns string
 
 // Spread vs concat:
 // - concat() returns a new array (Array)
@@ -106,8 +106,8 @@ console.log([1,2,3].join('-')); // '1-2-3'
 //
 // 1. How to check if a variable is an array?
 // Array.isArray(value) → Boolean
-console.log(Array.isArray(arr1)); // true
-console.log(Array.isArray('hello')); // false
+console.log(Array.isArray(arr1)); // true | returns Boolean
+console.log(Array.isArray('hello')); // false | returns Boolean
 
 // Interview Tip: Use isArray to distinguish arrays from objects or array-like values.
 
@@ -116,20 +116,20 @@ console.log(arr1[100]); // undefined
 
 // 3. How to remove duplicates from an array?
 let dupArr = [1,2,2,3];
-let unique = [...new Set(dupArr)]; // [1,2,3]
+let unique = [...new Set(dupArr)]; // [1,2,3] | returns new array
 
 // 4. How to deep clone an array?
-let arrClone = JSON.parse(JSON.stringify(nested));
+let arrClone = JSON.parse(JSON.stringify(nested)); // returns new deep-cloned array
 
 // 5. What is the difference between slice and splice?
 //    - slice(start, end): returns a shallow copy of a portion of an array into a new array. Does NOT modify the original.
 //      Example:
 let arrSlice = [1,2,3,4,5];
-let sliced = arrSlice.slice(1, 4); // [2,3,4], arrSlice unchanged
+let sliced = arrSlice.slice(1, 4); // [2,3,4], arrSlice unchanged | returns new array
 
 //    - splice(start, deleteCount, ...items): changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. MODIFIES the original.
 let arrSplice = [1,2,3,4,5];
-let removed = arrSplice.splice(1, 2, 99, 100); // removes 2 at index 1, inserts 99,100
+let removed = arrSplice.splice(1, 2, 99, 100); // removes 2 at index 1, inserts 99,100 | returns array of removed elements
 // arrSplice is now [1,99,100,4,5], removed is [2,3]
 
 //    - Interview Tip: Always clarify if mutation is allowed!
@@ -141,13 +141,13 @@ let removed = arrSplice.splice(1, 2, 99, 100); // removes 2 at index 1, inserts 
 
 // 6. How to flatten a deeply nested array?
 let deep = [1, [2, [3, [4]]]];
-console.log(deep.flat(Infinity)); // [1,2,3,4]
+console.log(deep.flat(Infinity)); // [1,2,3,4] | returns new flattened array
 
 // 6b. What is a shallow copy vs deep copy?
 //    - Shallow copy: Only top-level elements are copied; nested objects/arrays are still references.
 //    - Deep copy: All levels are copied, no shared references.
-let shallow = arr1.slice(); // shallow copy
-let deepCopy = JSON.parse(JSON.stringify(deep)); // deep copy (works for JSON-safe data)
+let shallow = arr1.slice(); // shallow copy | returns new array
+let deepCopy = JSON.parse(JSON.stringify(deep)); // deep copy (works for JSON-safe data) | returns new deep-cloned array
 
 //    - Interview Tip: Array methods like slice, concat, map, filter return shallow copies.
 
@@ -163,7 +163,7 @@ let deepCopy = JSON.parse(JSON.stringify(deep)); // deep copy (works for JSON-sa
 
 // 8. How to empty an array?
 let arrToEmpty = [1,2,3];
-arrToEmpty.length = 0;
+arrToEmpty.length = 0; // returns new length (0)
 
 // 9. What is a sparse array?
 let sparse = [];
@@ -196,14 +196,14 @@ console.log(matrix[1][2]); // 6
 
 // 9d. How to remove an element by value?
 let arrRemove = [1,2,3,4];
-let idx = arrRemove.indexOf(3);
-if(idx !== -1) arrRemove.splice(idx,1); // arrRemove is [1,2,4]
+let idx = arrRemove.indexOf(3); // returns index (Number), -1 if not found
+if(idx !== -1) arrRemove.splice(idx,1); // arrRemove is [1,2,4] | returns array of removed elements
 
 // 9e. How to merge arrays?
-let merged2 = [...arrA, ...arrB]; // Spread operator
+let merged2 = [...arrA, ...arrB]; // Spread operator | returns new array
 
 // 10. How to sum all elements?
-let arrSum = [1,2,3].reduce((a,b) => a+b, 0);
+let arrSum = [1,2,3].reduce((a,b) => a+b, 0); // returns accumulated value (Number)
 
 // =============================
 // 📝 Summary

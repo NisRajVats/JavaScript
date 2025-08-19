@@ -38,7 +38,7 @@ let lastChar = name[name.length - 1]; // 't'
 // Template Literals & Interpolation 🧩
 console.log(`Hello my name is ${name} and my age is ${age}`);
 
-// Escape Characters 🔖
+// Escape Characters 🔖 //Escape characters are special characters preceded by a backslash \ used inside strings to represent things that are normally hard or impossible to type directly.
 let quote = 'He said, "Hello!"';
 let path = "C:\\Users\\Nishant";
 

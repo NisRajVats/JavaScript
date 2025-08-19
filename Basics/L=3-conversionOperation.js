@@ -41,6 +41,7 @@ undefined == false // false
 
 // 1. null == undefined → true
 // == is loose equality → allows type coercion.
+// Type coercion in JavaScript means automatic or implicit conversion of one data type to another when an operation involves mismatched types.
 // JavaScript has a special rule:
 // null and undefined are considered equal to each other (and only to each other) when using ==.
 

@@ -5,6 +5,7 @@
 
 // ❓ Q1: What is the result of typeof null?
 console.log(typeof null); // "object" (this is a JavaScript bug/quirk)
+console.log(typeof undefined); // "undefined" ✅
 
 // ❓ Q2: What is the result of typeof NaN?
 console.log(typeof NaN); // "number" (NaN is a special number value)
@@ -57,7 +58,7 @@ console.log(typeof null === "object"); // true
 // =============================
 
 // 1️⃣ What is a Data Type? (Section: Basics)
-// 🏷️ A data type is a category (kind) of value that tells JavaScript what you can do with it. For example, numbers, text, true/false, etc.
+// 🏷️ A data type in JavaScript (or any language) tells the computer what kind of value is stored in a variable and how that value can be used.. For example, numbers, text, true/false, etc.
 
 // 2️⃣ Primitive Data Types (Section: Data Types)
 // These are the basic (simple) types in JavaScript:
