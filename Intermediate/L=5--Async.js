@@ -16,6 +16,8 @@
 // JavaScript is single-threaded and synchronous by default, 
 // but it can handle asynchronous operations using callbacks, timers, promises, async/await, etc.
 
+// Javascript itself and its engine is not asynchronous but it uses asynchronous features provided by web browsers or Node.js environment... therefore the environment makes javascript asynchronous.
+
 // 1.  callback function is a function that is passed as an argument to another function and called inside that function at some point. It's used for handling asynchronous operations like waiting for user input, fetching data from APIs, etc.
 // 2. timers are functions that allow us to schedule code execution after a certain amount of time has passed. They're commonly used for animations, delays, timeouts, etc.
 // 3. Promises represent the eventual completion or failure of an asynchronous operation and its resulting value.
