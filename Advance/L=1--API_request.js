@@ -41,7 +41,7 @@ xhr.send();
 // ---------------------------------
 // Modern replacement for XMLHttpRequest. Cleaner, promise-based → no callback hell.
 
-// Example: Fetch API
+// Example: Fetch API                                   // Fetch always returns a promise.
 fetch("https://api.example.com/data")
     .then(response => response.json())
     .then(data => console.log(data))

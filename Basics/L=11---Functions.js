@@ -7,6 +7,12 @@
 // ---------------------
 // A function is a reusable block of code that performs a specific task. Functions help organize code, avoid repetition, and enable modularity.
 
+//  Function vs Method 
+// If the block of code is independent then we call it function otherwise method
+// Method is a function which belongs to an object and functions are independent..
+
+
+
 // Function Declaration (Hoisted)
 function printMyName() {
     console.log("Nishant");

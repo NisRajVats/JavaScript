@@ -64,8 +64,6 @@ myPromise
 	});
 
 
-
-
 // Here we will consume Promise using async-await method
 const promiseThree = new Promise((resolve, reject) => {
 	// Simulate async operation (e.g., fetching data , DB calls , cryptography , network call etc)
