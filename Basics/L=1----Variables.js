@@ -94,6 +94,8 @@
 
 /* ========== HOISTING ========== */
 
+// Hoisting hoti kyu h : because execution context m ,  ek step hote h :  Memory Creation Phase , jisme sari declarations ko memory m store kr deta h javascript ,  fir execution phase m jata h ,  aur waha se code ko line by line execute krta h .  isliye agar hum variable ko use krte h ,  to wo undefined show krta h ,  kyuki value assign nhi hui hoti h abhi tak .  lekin declaration ho chuki hoti h memory m .
+
 // var is hoisted → declaration goes to top of their scopes and not the value.
 console.log(a); // undefined (var is hoisted, but value is not assigned yet)
 var a = 10; // Declaration is hoisted, assignment happens here

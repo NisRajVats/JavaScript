@@ -65,7 +65,7 @@ console.log(typeof null === "object"); // true
 //   - 🔤 String: Text (like "hello").
 //   - 🔢 Number: Any number (like 5, 3.14, -7).
 //   - 🔘 Boolean: true or false (used for yes/no, on/off situations).
-//   - ⚫ Null: Special value meaning "nothing" or "empty".
+//   - ⚫ Null: Special value meaning "nothing" or "empty". Standalone Value
 //   - ⚪ Undefined: A variable that has not been given a value yet.
 //   - 🪙 Symbol: A unique value (used for special cases, covered in Advanced JavaScript).
 //   - 🔢 BigInt: For very large numbers (bigger than Number can handle, covered in Advanced JavaScript).

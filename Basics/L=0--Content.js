@@ -85,3 +85,17 @@
 //    👉 map, filter, reduce, forEach, and other array methods for functional programming.
 // 18. L=18--Filter-Map-reduce.js - Filter, Map, Reduce
 //    👉 Practical use-cases and chaining of filter, map, and reduce for data processing.
+
+
+
+//Variable Shadowing
+//Dynamic typing
+//Type coercion
+//Hoisting
+//Temporal Dead Zone(TDZ)
+//Nullish Coalescing Operator(??)
+// Short- Circuit evaluation
+// Optional Chaining(?.)
+//Ternary Operator(condition ? true : false)
+//optional Chaining
+//// Template Literals & Interpolation

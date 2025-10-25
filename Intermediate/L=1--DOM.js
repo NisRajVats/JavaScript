@@ -60,10 +60,47 @@ allListItems.forEach(function(li, idx) {
 // This is a modern and clean way to style multiple elements at once.
 
 
+// WE often get NodeList or HTMLCollection when selecting multiple elements.
+// They are similar but have key differences:
+// - NodeList: Can be static (querySelectorAll) or live (childNodes). Supports forEach.
+// - HTMLCollection: Always live (updates with DOM changes). Does NOT support forEach directly.
+// To convert either to a real array, use Array.from() or spread syntax [...collection].
+
+Array.from(allListItems).forEach(li => li.style.fontWeight = 'bold'); // Example conversion
+
 
 // --- Modifying Styles ---
 heading.style.color = 'blue'; // Changes color to blue
 para.style.backgroundColor = 'yellow'; // Adds background color
+
+// --- Classes and classList (modern, recommended) ---
+// Old way (works but error-prone with existing classes):
+// element.className = element.className + ' new-class';
+// Problems: can create duplicate classes and requires manual spacing.
+
+// Modern and recommended: classList (add/remove/toggle/contains/replace)
+// Adds one or more classes (no duplicates):
+heading.classList.add('highlight');
+heading.classList.add('big', 'blue-text'); // add multiple classes at once
+
+// Removes a class:
+heading.classList.remove('blue-text');
+
+// Toggle a class (adds if missing, removes if present):
+heading.classList.toggle('active');
+
+// Check if element has a class:
+if (heading.classList.contains('highlight')) {
+	console.log('Heading is highlighted');
+}
+
+// Replace a class (useful for switching states):
+heading.classList.replace('big', 'small');
+
+// Notes:
+// - classList methods are supported in modern browsers and are the cleanest way
+//   to manipulate classes programmatically.
+// - Use classList over className when adding/removing single classes.
 
 // --- Adding & Removing Elements ---
 const newDiv = document.createElement('div'); // Create new <div>

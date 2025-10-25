@@ -25,7 +25,7 @@ add(45); // Adds <li>45</li>
 
 // --- Optimized way to add <li> (avoids innerText) ---
 function optimisezadd(num) {
-    const li = document.createElement("li"); // 🆕 Create <li>
+    const li = document.createElement("li"); // 🆕 Create   <li>
     li.appendChild(document.createTextNode(`${num}`)); // 📝 Add text node (safer, avoids HTML injection)
     document.querySelector(".list").appendChild(li); // ➕ Add to .list
 }

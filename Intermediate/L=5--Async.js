@@ -6,7 +6,7 @@
 
 // Step 1: When a JavaSCript program run , the engine creates a global execution context and pushes it onto the call stack and then functions are pushed onto the stack one by one as they are invoked. Once a function completes, it is popped off the stack. If there are no more functions left on the stack, the program terminates.
 // Step 2: But sometimes we need to do something asynchronously i.e., not immediately but later. For example, if we want to fetch data from a server, we don't want our program to wait for the response before continuing. Instead, we want to continue executing other parts of the program while waiting for the response. That's where asynchronous programming comes into play.
-// Sep 4 : After getting the response from server / we push it back to call stack using callback function from call back queue/task queue, and then pop it out of stack .
+// Sep 4 : After getting the response from serv er / we push it back to call stack using callback function from call back queue/task queue, and then pop it out of stack .
 // fetch() is expanded form of task queue/callback queue.
 
 

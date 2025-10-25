@@ -1,21 +1,7 @@
 // =============================
 // 🔁 All About Loops in JavaScript
 // =============================
-
-// What is a Loop? 🤔
-// ------------------
-// A loop is a control structure that repeats a block of code as long as a condition is true.
-// Loops help automate repetitive tasks and process collections of data.
-
-// =============================
-// 🛣️ Types of Loops in JavaScript
-// =============================
-
-// 1. for loop
-for (let i = 0; i < 3; i++) {
-	console.log('for loop:', i);
-}
-
+0
 // 2. while loop
 let count = 0;
 while (count < 3) {

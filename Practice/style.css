@@ -1,0 +1,141 @@
+/* --- Google Font & Basic Reset --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- Form Container --- */
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-header h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .form-header p {
+            font-size: 14px;
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* --- Form Groups & Labels --- */
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        /* --- Inputs, Textarea, Select --- */
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        /* --- Validation States --- */
+        .form-control.success {
+            border-color: #2ecc71;
+        }
+
+        .form-control.error {
+            border-color: #e74c3c;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none; /* Hidden by default */
+        }
+
+        /* --- Checkbox --- */
+        .form-group-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .form-group-checkbox label {
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        /* --- Submit Button --- */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .submit-btn:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        /* --- Submission Status --- */
+        #submission-status {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            display: none; /* Hidden by default */
+        }
+
+        #submission-status.success {
+            color: #2ecc71;
+        }
+
+        #submission-status.error {
+            color: #e74c3c;
+        }

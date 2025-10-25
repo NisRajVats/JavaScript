@@ -14,7 +14,7 @@ let num3 = -42; // Negative number
 
 // Number Object vs Primitive ⚠️
 let n = 123;
-let objNum = new Number(123); // Avoid using Number objects!
+let objNum = new Number(123); // Avoid using Number objects!   ; Object Wrapper 
 console.log(typeof n); // 'number'
 console.log(typeof objNum); // 'object'
 
@@ -90,6 +90,8 @@ console.log(0.1 + 0.2 === 0.3); // false (precision issue)
 console.log(Math.abs((0.1 + 0.2) - 0.3) < Number.EPSILON); // true (safe check)
 
 // 5. How to generate a random integer between min and max?
+
+//point to remember :
 function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }

@@ -36,6 +36,9 @@
 //    - Code is executed line by line
 //    - Variables are assigned values, functions are invoked
 
+
+// How JS runs :  Global execution -> Memory phase -> Execution phase
+
 // Example:
 console.log(a); // undefined (hoisted)
 var a = 10;
@@ -67,7 +70,7 @@ first();
 //    - Global: created once, for the whole script. Function: created for each function call.
 
 // 2. What is hoisting?
-//    - Variables (var) and function declarations are moved to the top of their scope during the creation phase.
+//    - Variables (var) and function declarations are moved to the top of their scope during the memory creation phase.
 
 // 3. What is the call stack? What happens if it overflows?
 //    - The call stack tracks function calls. If it gets too deep (e.g., infinite recursion), you get a "Maximum call stack size exceeded" error.

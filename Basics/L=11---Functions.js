@@ -122,6 +122,7 @@ console.log(calculateCartPrice(20, 90, 90, 89, 90, 32)); // [90, 89, 90, 32]
 
 // 4. What is the difference between arrow function and regular function?
 //    - Arrow functions do NOT have their own 'this', 'arguments', or 'prototype'.
+//    - Instead, they inherit 'this' from the parent scope (lexical this).
 //    - Cannot be used as constructors.
 //    - Arrow functions are best for short, non-method functions.
 
